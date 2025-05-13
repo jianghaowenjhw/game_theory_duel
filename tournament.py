@@ -106,7 +106,7 @@ class Tournament:
                 scores[agent_b.name][agent_a.name] = score_b
                   # 写入日志
                 self.logger.info(f"{agent_a.name} vs {agent_b.name}:")
-                self.logger.info(f"  最低得分: {agent_a.name}={min_score_a}, {agent_b.name}={min_score_b}")
+                self.logger.info(f"  25分位数: {agent_a.name}={score_a}, {agent_b.name}={score_b}")
                 self.logger.info(f"  所有得分: {agent_a.name}={result.scores_a}, {agent_b.name}={result.scores_b}")
                 self.logger.info(f"  胜负情况: {result.get_win_count_info()}")
                 
