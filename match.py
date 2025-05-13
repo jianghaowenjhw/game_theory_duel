@@ -37,7 +37,15 @@ class MatchResult:
         sorted_b = sorted(self.scores_b)
         mid_a = sorted_a[len(sorted_a) // 2] if sorted_a else 0
         mid_b = sorted_b[len(sorted_b) // 2] if sorted_b else 0
-        return mid_a, mid_b
+        return mid_a, mid_b\
+        
+    def get_025_scores(self) -> Tuple[float, float]:
+        """获取25%分位数得分"""
+        sorted_a = sorted(self.scores_a)
+        sorted_b = sorted(self.scores_b)
+        q1_a = sorted_a[int(len(sorted_a) * 0.25)] if len(sorted_a) > 3 else 0
+        q1_b = sorted_b[int(len(sorted_b) * 0.25)] if len(sorted_b) > 3 else 0
+        return q1_a, q1_b
     
     def get_win_count_info(self) -> str:
         """获取胜负情况统计"""
