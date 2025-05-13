@@ -130,9 +130,9 @@ def parse_args():
     parser.add_argument('--mode', type=str, default='tournament', 
                         choices=['individual', 'tournament'],
                         help='比赛模式：个人赛或大比赛')
-    parser.add_argument('--beat', type=int, default=5,
+    parser.add_argument('--beat', type=int, default=3,
                         help='选择beat且对方选择still时的得分')
-    parser.add_argument('--wwin', type=int, default=3,
+    parser.add_argument('--wwin', type=int, default=2,
                         help='双方都选择still时的得分')
     parser.add_argument('--llost', type=int, default=1,
                         help='双方都选择beat时的得分')
