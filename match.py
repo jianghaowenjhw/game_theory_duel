@@ -31,6 +31,14 @@ class MatchResult:
         min_b = min(self.scores_b) if self.scores_b else 0
         return min_a, min_b
     
+    def get_middle_scores(self) -> Tuple[float, float]:
+        """获取中位数得分"""
+        sorted_a = sorted(self.scores_a)
+        sorted_b = sorted(self.scores_b)
+        mid_a = sorted_a[len(sorted_a) // 2] if sorted_a else 0
+        mid_b = sorted_b[len(sorted_b) // 2] if sorted_b else 0
+        return mid_a, mid_b
+    
     def get_win_count_info(self) -> str:
         """获取胜负情况统计"""
         win_a = 0
