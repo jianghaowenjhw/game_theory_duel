@@ -130,17 +130,17 @@ def parse_args():
     parser.add_argument('--mode', type=str, default='tournament', 
                         choices=['individual', 'tournament'],
                         help='比赛模式：个人赛或大比赛')
-    parser.add_argument('--beat', type=int, default=3,
+    parser.add_argument('--beat', type=int, default=5,
                         help='选择beat且对方选择still时的得分')
-    parser.add_argument('--wwin', type=int, default=2,
+    parser.add_argument('--wwin', type=int, default=3,
                         help='双方都选择still时的得分')
     parser.add_argument('--llost', type=int, default=1,
                         help='双方都选择beat时的得分')
     parser.add_argument('--beaten', type=int, default=0,
                         help='选择still且对方选择beat时的得分')
-    parser.add_argument('--rounds', type=int, default=300,
+    parser.add_argument('--rounds', type=int, default=500,
                         help='每场对抗的回合数')
-    parser.add_argument('--matches', type=int, default=3,
+    parser.add_argument('--matches', type=int, default=30,
                         help='每对智能体之间的对抗次数')
     parser.add_argument('--agent1', type=str, default='TitForTatAgent',
                         help='个人赛智能体1名称（仅在个人赛模式下使用）')

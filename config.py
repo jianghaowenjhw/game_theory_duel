@@ -11,9 +11,9 @@ class GameConfig:
             beat: 选择beat且对方选择still时的得分
             wwin: 双方都选择still时的得分
             llost: 双方都选择beat时的得分
-            beaten: 选择still且对方选择beat时的得分（默认为0）
-            rounds_per_match: 每场对抗的回合数（默认300）
-            num_matches: 每对智能体之间的对抗次数（默认3）
+            beaten: 选择still且对方选择beat时的得分
+            rounds_per_match: 每场对抗的回合数
+            num_matches: 每对智能体之间的对抗次数
         """
         # 验证参数满足 beat > wwin > llost > beaten
         if not (beat > wwin > llost >= beaten):

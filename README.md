@@ -78,12 +78,12 @@ python main.py [options]
 
 选项:
   --mode {individual,tournament}  比赛模式：个人赛或大比赛 (默认: tournament)
-  --beat BEAT                     选择beat且对方选择still时的得分 (默认: 3)
-  --wwin WWIN                     双方都选择still时的得分 (默认: 2)
+  --beat BEAT                     选择beat且对方选择still时的得分 (默认: 5)
+  --wwin WWIN                     双方都选择still时的得分 (默认: 3)
   --llost LLOST                   双方都选择beat时的得分 (默认: 1)  
   --beaten BEATEN                 选择still且对方选择beat时的得分 (默认: 0)
-  --rounds ROUNDS                 每场对抗的回合数 (默认: 300)
-  --matches MATCHES               每对智能体之间的对抗次数 (默认: 3)
+  --rounds ROUNDS                 每场对抗的回合数 (默认: 500)
+  --matches MATCHES               每对智能体之间的对抗次数 (默认: 30)
   --agent1 AGENT1                 个人赛智能体1名称 (默认: TitForTatAgent)
   --agent2 AGENT2                 个人赛智能体2名称 (默认: RandomAgent)
   --log LOG                       日志文件路径
