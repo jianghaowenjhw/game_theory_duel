@@ -101,9 +101,9 @@ class Tournament:
                 result = match.run(agent_a, agent_b)
                 
                 # 记录最低得分（根据规则5）
-                min_score_a, min_score_b = result.get_min_scores()
-                scores[agent_a.name][agent_b.name] = min_score_a
-                scores[agent_b.name][agent_a.name] = min_score_b
+                score_a, score_b = result.get_025_scores()
+                scores[agent_a.name][agent_b.name] = score_a
+                scores[agent_b.name][agent_a.name] = score_b
                   # 写入日志
                 self.logger.info(f"{agent_a.name} vs {agent_b.name}:")
                 self.logger.info(f"  最低得分: {agent_a.name}={min_score_a}, {agent_b.name}={min_score_b}")
