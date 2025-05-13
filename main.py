@@ -127,6 +127,8 @@ def run_tournament(config: GameConfig, agents: List[Agent] = None, log_file: str
 def parse_args():
     """解析命令行参数"""
     parser = argparse.ArgumentParser(description='博弈论智能体比赛')
+    parser.add_argument('--version', action='version', version='v0.1', 
+                        help='显示版本信息')
     parser.add_argument('--mode', type=str, default='tournament', 
                         choices=['individual', 'tournament'],
                         help='比赛模式：个人赛或大比赛')
